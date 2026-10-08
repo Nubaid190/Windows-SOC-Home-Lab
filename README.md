@@ -46,6 +46,29 @@ the execution of whoami.exe, launched through cmd.exe.
 - Process creation logs can help SOC analysts investigate potentially suspicious activity
 - Individual events should be assessed alongside other evidence before determining whether activity is malicious
 
+### Investigation Summary – Event ID 4688
+
+**Activity Investigated:** Execution of whoami.exe
+
+**Event ID:** 4688 – Process Creation
+
+**Observations:**
+- Windows recorded the execution of 'whoami.exe'.
+- The executable was launched from 'C:\Windows\System32\whoami.exe'.
+- The parent process was 'C:\Windows\System32\cmd.exe'.
+- The event was recorded as Audit Success.
+- The Process Command Line field was empty.
+
+**Analysis:**
+
+The 'whoami.exe' utility displays the security identity of the current user. Although it is a legitimate Windows utility, attackers can also use it during system reconnaissance.
+
+In this investigation, the execution was expected because I intentionally ran the command within my virtual lab.
+
+**Conclusion:**
+
+The event demonstrated how Windows Security logs can provide visibility into process execution. No malicious activity was identified in this test, although a single event would not be sufficient to determine whether a system was compromised.
+
 ## Skills demonstrated 
 - Windows endpoint monitoring
 - Security event log analysis
