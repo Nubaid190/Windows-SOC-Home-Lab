@@ -33,6 +33,13 @@ Executed several test commands within windows PowerShell to generate process cre
 - 'systeminfo'
 - 'ipconfig'
 
+### Event ID 4688 – Process Creation Evidence
+
+The screenshot below shows Windows Event ID 4688 recording
+the execution of whoami.exe, launched through cmd.exe.
+
+![Event ID 4688 - whoami execution](event%204688%20whoami.png) 
+
 ## Key findings
 - Event ID 4688 records windows process creation activity
 - Command-line auditing provides additional context about executed commands
